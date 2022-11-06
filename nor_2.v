@@ -10,11 +10,11 @@ module nor_2(NOR_OUT,A,B);
 	pmos (N_B,PWR,B);
 	nmos (N_B,GND,B);
 
-    pmos (NOR_OUT,PWR,N_A);
-    pmos (NOR_OUT,PWR,N_B);
-    
-    nmos (NOR_OUT,w1,N_A);   
-    nmos (w1,GND,N_B); 
+    pmos (w1,PWR,N_A);   
+    pmos (NOR_OUT,w1,N_B); 
 
+    nmos (NOR_OUT,GND,N_A);
+    nmos (NOR_OUT,GND,N_B);
+    
 endmodule
     
